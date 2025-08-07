@@ -1,0 +1,12 @@
+{
+  "files": [
+    "src/index.css"
+  ],
+  "references": [],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
