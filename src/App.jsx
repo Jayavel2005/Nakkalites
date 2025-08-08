@@ -5,6 +5,7 @@ import Title from './components/Title'
 import Testimonial from './components/Testimonial'
 import Promotion from './components/Promotion'
 import Contact from './components/Contact'
+import YoutubeVideos from './components/YoutubeVideos'
 
 
 const App = () => {
@@ -18,6 +19,9 @@ const App = () => {
         <Title title="Nakkalites App" subTitle="Entertainment, Anytime, Anywhere" />
         <Promotion />
         <Title title="recent videos" subTitle="Real voices from our community" />
+        <div className='mb-15'>
+          <YoutubeVideos />
+        </div>
         <Title title="What Fans Say" subTitle="Real voices from our community" />
 
         <Testimonial />
