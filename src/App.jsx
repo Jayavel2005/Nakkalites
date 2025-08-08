@@ -18,7 +18,6 @@ const App = () => {
         <Title title="Streaming Platforms" subTitle="Watch Nakkalites Everywhere" />
         <Title title="Nakkalites App" subTitle="Entertainment, Anytime, Anywhere" />
         <Promotion />
-        <Title title="recent videos" subTitle="Real voices from our community" />
         <div className='mb-15'>
           <YoutubeVideos />
         </div>

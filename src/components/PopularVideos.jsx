@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 
-const RecentsVideos = () => {
+const PopularVideos = () => {
 
   const [recentVideos, setRecentVidoes] = useState([]);
 
@@ -318,4 +318,4 @@ const RecentsVideos = () => {
   )
 }
 
-export default RecentsVideos
+export default PopularVideos

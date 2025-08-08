@@ -1,33 +1,40 @@
-import React from 'react'
-import { Tabs } from "../components/ui/tabs"
+import React, { useState } from 'react'
+import RecentsVideos from './RecentsVideos';
+import PopularVideos from './PopularVideos';
 
 const YoutubeVideos = () => {
+    const [tabs, setTabs] = useState('popular');
 
-    const tabs = [
-        {
-            title: "Top Videos",
-            value: "topVideos",
-            content: (
-                <div className='flex justify-center items-center h-full bg-red-500 rounded-2xl'>
-                    <h1>Jayavel</h1>
-                </div>
-            ),
-        },
-        {
-            title: "Recent Videos",
-            value: "recentVideos",
-            content: (
-                <div className='flex justify-center items-center h-full bg-amber-500 rounded-2xl'>
-                    <h1>Jayavel</h1>
-                </div>
-            ),
-        }
-    ];
     return (
-        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative  flex flex-col max-w-5xl mx-auto w-full  items-start justify-start">
-            <Tabs tabs={tabs} />
-        </div>
-    )
-}
+        <div className='flex flex-col items-center justify-center mt-10'>
+            {/* Tab Triggers */}
+            <div className='border rounded-full inline-flex gap-3 p-1 bg-gray-100'>
+                <button
+                    onClick={() => setTabs('popular')}
+                    className={`px-4 py-2 rounded-full transition-all duration-300 ${
+                        tabs === 'popular' ? 'bg-blue-500 text-white shadow-md' : 'text-gray-600 hover:bg-gray-200'
+                    }`}
+                >
+                    Popular Videos
+                </button>
+                <button
+                    onClick={() => setTabs('recent')}
+                    className={`px-4 py-2 rounded-full transition-all duration-300 ${
+                        tabs === 'recent' ? 'bg-blue-500 text-white shadow-md' : 'text-gray-600 hover:bg-gray-200'
+                    }`}
+                >
+                    Recent Videos
+                </button>
+            </div>
 
-export default YoutubeVideos
+            {/* Tab Content with Smooth Animation */}
+            <div className="mt-6 w-full flex justify-center">
+                <div className="transition-opacity duration-500 ease-in-out w-full">
+                    {tabs === 'recent' ? <RecentsVideos /> : <PopularVideos />}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default YoutubeVideos;
