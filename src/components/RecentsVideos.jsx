@@ -8,7 +8,7 @@ const RecentsVideos = () => {
   // useEffect(() => {
   //   const fetchVideos = async () => {
   //     try {
-  //       const API_KEY = "AIzaSyCR4N2op0wX-xueCISabQ6NlchDko0bOoo";
+  //       const API_KEY = "";
   //       const CHANNEL_ID = "UCiPmhfdCL06cSVTXKabF0Zg";
 
   //       const res = await fetch(
